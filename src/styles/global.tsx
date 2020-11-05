@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -12,7 +12,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: #FFFFFF;
+    background: #e3e3e3;
     -webkit-font-smoothing: antialiased;
     font-family: 'Montserrat', sans-serif;
   }

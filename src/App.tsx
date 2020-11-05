@@ -1,15 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import GlobalStyles from "./styles/global";
+import Dashboard from './pages/Dashboard';
+import GlobalStyles from './styles/global';
 
-const App: React.FC = () => {
-  return (
-    <>
-      <GlobalStyles />
-      <h1>Hello World</h1>
-      <span>Opaaaaaaa agora vai õ/</span>
-    </>
-  );
-};
+const App: React.FC = () => (
+  <>
+    <GlobalStyles />
+    <Dashboard />
+  </>
+);
 
 export default App;

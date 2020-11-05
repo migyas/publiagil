@@ -24,6 +24,7 @@
         "react-hooks",
         "prettier"
     ],
+
     "rules": {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
@@ -32,19 +33,19 @@
       "camelcase": "off",
       "@typescript-eslint/ban-types": "off",
       "no-use-before-define": "off",
-      "prettier/prettier": "error"
+      "prettier/prettier": "error",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+     ]
     },
     "settings": {
       "import/resolver": {
         "typescript": {}
       }
-    },
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never"
-      }
-   ]
+    }
 }
