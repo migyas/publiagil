@@ -11,18 +11,14 @@ const Aside: React.FC = () => (
     <S.Content>
       <S.Image src={logo} alt="logo" />
       <S.DivImg>
-        <S.Image
-          src={grid}
-          alt="grid"
-          style={{
-            position: 'absolute',
-            top: '1.1rem',
-            left: '1.125rem',
-          }}
-        />
+        <S.Image src={grid} alt="grid" />
       </S.DivImg>
-      <SettingsIcon style={{ fontSize: '2.2rem', color: '#E0E0E0' }} />
-      <AddCircleRoundedIcon style={{ fontSize: '5rem', color: '#2F80ED' }} />
+      <SettingsIcon
+        style={{ fontSize: '2.2rem', color: '#E0E0E0', cursor: 'pointer' }}
+      />
+      <S.Plus>
+        <AddCircleRoundedIcon />
+      </S.Plus>
     </S.Content>
   </S.Container>
 );
