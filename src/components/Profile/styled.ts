@@ -4,7 +4,13 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 23rem;
+  max-width: 23rem;
+  width: 100%;
+
+  @media (max-width: 350px) {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const User = styled.div`
@@ -15,16 +21,10 @@ export const User = styled.div`
   color: #2f80ed;
 `;
 
-export const TitleUser = styled.h2`
-  font-size: 1.6rem;
-  font-weight: 600;
-
+export const TitleUser = styled.div`
   @media (max-width: 795px) {
     font-size: 1.2rem;
   }
 `;
 
-export const DescriptionUser = styled.span`
-  font-size: 1rem;
-  font-weight: 400;
-`;
+export const DescriptionUser = styled.div``;

@@ -8,22 +8,23 @@ import Filters from '../../components/Filters';
 import ResultsFilter from '../../components/ResultsFilter';
 
 import * as S from './styled';
+import Text from '../../components/Text';
 
 const Dashboard: React.FC = () => (
   <>
     <Aside />
     <Grid>
-      <S.Container>
-        <S.Header>
-          <SearchField />
-          <Profile />
-        </S.Header>
-        <S.MainTitle>Dashboard</S.MainTitle>
-        <S.Content>
-          <Filters />
-          <ResultsFilter />
-        </S.Content>
-      </S.Container>
+      <S.Header>
+        <SearchField />
+        <Profile />
+      </S.Header>
+      <S.MainTitle>
+        <Text component="h1" modifiers={['header1', 'black']}>Dashboard</Text>
+      </S.MainTitle>
+      <S.Content>
+        <Filters />
+        <ResultsFilter />
+      </S.Content>
     </Grid>
   </>
 );

@@ -15,6 +15,7 @@ const SearchField: React.FC = () => (
         fontSize: '1.8rem',
       }}
     />
+
   </S.Container>
 );
 

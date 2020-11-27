@@ -9,9 +9,7 @@ export const Content = styled.div`
     flex-direction: column;
   }
 `;
-export const MainTitle = styled.h1`
-  font-size: 2.4rem;
-  font-weight: 600;
+export const MainTitle = styled.div`
   margin-top: 3.5rem;
   margin-bottom: 2.4rem;
 `;
@@ -21,4 +19,8 @@ export const Header = styled.div`
   padding-top: 2.4rem;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 350px) {
+    flex-direction: column-reverse;
+  }
 `;

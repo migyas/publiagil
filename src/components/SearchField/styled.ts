@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-// import media from 'styled-media-query';
 
 export const Container = styled.div`
   position: relative;
   height: 3rem;
-  width: 50rem;
+  max-width: 50rem;
+  width: 100%;
   margin-right: 1.2rem;
 `;
 

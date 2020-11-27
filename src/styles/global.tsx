@@ -12,7 +12,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #e3e3e3;
+    background:#FBFBFB;
     -webkit-font-smoothing: antialiased;
     font-family: 'Montserrat', sans-serif;
   }

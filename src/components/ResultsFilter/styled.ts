@@ -1,6 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Card } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+
+interface PropsTags {
+  tagName?: string;
+  tagType?: string;
+}
 
 export const Container = styled(Card)`
   max-width: 92rem;
@@ -10,6 +15,7 @@ export const Container = styled(Card)`
   margin-left: 1.6rem;
   margin-right: 1.6rem;
   margin-bottom: 2rem;
+  padding-bottom: 5rem;
 
   @media (max-width: 1100px) {
     width: 100%;
@@ -17,14 +23,16 @@ export const Container = styled(Card)`
     margin-left: 0;
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 450px) {
+    max-height: 82rem;
+  }
 `;
 
-export const Title = styled.h2`
+export const Title = styled.div`
   padding-top: 3.2rem;
   padding-left: 4rem;
   margin-bottom: 2.8rem;
-  font-size: 1.8rem;
-  font-weight: 700;
 `;
 
 export const List = styled.ul`
@@ -70,12 +78,20 @@ export const Value = styled.p`
   color: #000000;
 `;
 
-export const FilterTag = styled.div`
-  background-color: rgb(235, 87, 87, 0.37);
-  padding: 0.5rem 1.5rem;
-  border-radius: 16px;
-  font-size: 1rem;
-  color: #eb5757;
+export const FilterTag = styled.div<PropsTags>`
+  max-width: 16rem;
+  width: 100%;
+  text-align: center;
+
+  /* ${({ tagName }) => (tagName === 'Aguardando Agendamento'
+    ? css`
+          background-color: rgb(235, 87, 87, 0.37);
+          color: #eb5757;
+        `
+    : css`
+         background-color: yellowgreen;
+        `)} */
+
 `;
 
 export const OptionsRequest = styled.div`
@@ -125,6 +141,7 @@ export const NumberPgs = styled.div`
   @media (max-width: 727px) {
     margin: 0 auto !important;
     padding: 0 !important;
+    justify-content: center;
   }
 `;
 

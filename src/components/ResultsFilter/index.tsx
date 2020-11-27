@@ -5,10 +5,20 @@ import DeleteOutlineOutlinedIcon from '@material-ui/icons/DeleteOutlineOutlined'
 import iconImage from '../../assets/icon-image.svg';
 
 import * as S from './styled';
+import Text from '../Text';
 
-const ResultsFilter: React.FC = () => (
+interface PropsResultsFilter {
+  // tagType?: boolean;
+  tagType?: string;
+}
+
+const ResultsFilter: React.FC<PropsResultsFilter> = () => (
   <S.Container>
-    <S.Title>Todos os pedidos</S.Title>
+    <S.Title>
+      <Text component="h2" modifiers={['header2']}>
+        Todos os pedidos
+      </Text>
+    </S.Title>
     <S.List>
       <S.ListItem>
         <S.Image src={iconImage} alt="download" />
@@ -18,8 +28,62 @@ const ResultsFilter: React.FC = () => (
           <S.Date>10/10/2020 18:30</S.Date>
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
+        <S.FilterTag>
+          <Text component="div" modifiers={['awaitingAppointment']}>
+            Aguardando agendamento
+          </Text>
+        </S.FilterTag>
+        <S.OptionsRequest>
+          <S.LinkItem to="/home">Ver pedido</S.LinkItem>
+          <S.Options>
+            <CloudDownloadOutlinedIcon
+              style={{ marginRight: '.8rem', cursor: 'pointer' }}
+            />
+            <DeleteOutlineOutlinedIcon
+              style={{ marginRight: '.8rem', cursor: 'pointer' }}
+            />
+          </S.Options>
+        </S.OptionsRequest>
+      </S.ListItem>
+      <S.ListItem>
+        <S.Image src={iconImage} alt="download" />
+        <S.ID>#16835</S.ID>
+        <S.NameDate>
+          <S.Name>Maria Luciana</S.Name>
+          <S.Date>10/10/2020 18:30</S.Date>
+        </S.NameDate>
+        <S.Value>R$ 5310,88</S.Value>
+        <S.FilterTag>
+          <Text component="div" modifiers={['awaitingApproval']}>
+            Aguardando aprovação
+          </Text>
+        </S.FilterTag>
+        <S.OptionsRequest>
+          <S.LinkItem to="/home">Ver pedido</S.LinkItem>
+          <S.Options>
+            <CloudDownloadOutlinedIcon
+              style={{ marginRight: '.8rem', cursor: 'pointer' }}
+            />
+            <DeleteOutlineOutlinedIcon
+              style={{ marginRight: '.8rem', cursor: 'pointer' }}
+            />
+          </S.Options>
+        </S.OptionsRequest>
+      </S.ListItem>
+      <S.ListItem>
+        <S.Image src={iconImage} alt="download" />
+        <S.ID>#16835</S.ID>
+        <S.NameDate>
+          <S.Name>Maria Luciana</S.Name>
+          <S.Date>10/10/2020 18:30</S.Date>
+        </S.NameDate>
+        <S.Value>R$ 5310,88</S.Value>
+        <S.FilterTag>
+          <Text component="div" modifiers={['forwarded']}>
+            Encaminhado
+          </Text>
+        </S.FilterTag>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>
@@ -41,7 +105,37 @@ const ResultsFilter: React.FC = () => (
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
+        <S.FilterTag>
+          <Text component="div" modifiers={['onCarriage']}>
+            Em transporte
+          </Text>
+        </S.FilterTag>
+
+        <S.OptionsRequest>
+          <S.LinkItem to="/home">Ver pedido</S.LinkItem>
+          <S.Options>
+            <CloudDownloadOutlinedIcon
+              style={{ marginRight: '.8rem', cursor: 'pointer' }}
+            />
+            <DeleteOutlineOutlinedIcon
+              style={{ marginRight: '.8rem', cursor: 'pointer' }}
+            />
+          </S.Options>
+        </S.OptionsRequest>
+      </S.ListItem>
+      <S.ListItem>
+        <S.Image src={iconImage} alt="download" />
+        <S.ID>#16835</S.ID>
+        <S.NameDate>
+          <S.Name>Maria Luciana</S.Name>
+          <S.Date>10/10/2020 18:30</S.Date>
+        </S.NameDate>
+        <S.Value>R$ 5310,88</S.Value>
+        <S.FilterTag>
+          <Text component="div" modifiers={['inAnalysis']}>
+            Em análise
+          </Text>
+        </S.FilterTag>
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>
@@ -63,7 +157,12 @@ const ResultsFilter: React.FC = () => (
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
+        <S.FilterTag>
+          <Text component="div" modifiers={['forwarded']}>
+            Encaminhado
+          </Text>
+        </S.FilterTag>
+
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>
@@ -85,7 +184,12 @@ const ResultsFilter: React.FC = () => (
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
+        <S.FilterTag>
+          <Text component="div" modifiers={['awaitingPayment']}>
+            Aguardando pagamento
+          </Text>
+        </S.FilterTag>
+
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>
@@ -107,7 +211,11 @@ const ResultsFilter: React.FC = () => (
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
+        <S.FilterTag>
+          <Text component="div" modifiers={['finished']}>
+            Finalizado
+          </Text>
+        </S.FilterTag>
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>
@@ -129,7 +237,11 @@ const ResultsFilter: React.FC = () => (
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
+        <S.FilterTag>
+          <Text component="div" modifiers={['finished']}>
+            Finalizado
+          </Text>
+        </S.FilterTag>
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>
@@ -151,7 +263,11 @@ const ResultsFilter: React.FC = () => (
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
+        <S.FilterTag>
+          <Text component="div" modifiers={['finished']}>
+            Finalizado
+          </Text>
+        </S.FilterTag>
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>
@@ -173,7 +289,11 @@ const ResultsFilter: React.FC = () => (
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
+        <S.FilterTag>
+          <Text component="div" modifiers={['finished']}>
+            Finalizado
+          </Text>
+        </S.FilterTag>
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>
@@ -195,73 +315,11 @@ const ResultsFilter: React.FC = () => (
         </S.NameDate>
         <S.Value>R$ 5310,88</S.Value>
 
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
-        <S.OptionsRequest>
-          <S.LinkItem to="/home">Ver pedido</S.LinkItem>
-          <S.Options>
-            <CloudDownloadOutlinedIcon
-              style={{ marginRight: '.8rem', cursor: 'pointer' }}
-            />
-            <DeleteOutlineOutlinedIcon
-              style={{ marginRight: '.8rem', cursor: 'pointer' }}
-            />
-          </S.Options>
-        </S.OptionsRequest>
-      </S.ListItem>
-      <S.ListItem>
-        <S.Image src={iconImage} alt="download" />
-        <S.ID>#16835</S.ID>
-        <S.NameDate>
-          <S.Name>Maria Luciana</S.Name>
-          <S.Date>10/10/2020 18:30</S.Date>
-        </S.NameDate>
-        <S.Value>R$ 5310,88</S.Value>
-
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
-        <S.OptionsRequest>
-          <S.LinkItem to="/home">Ver pedido</S.LinkItem>
-          <S.Options>
-            <CloudDownloadOutlinedIcon
-              style={{ marginRight: '.8rem', cursor: 'pointer' }}
-            />
-            <DeleteOutlineOutlinedIcon
-              style={{ marginRight: '.8rem', cursor: 'pointer' }}
-            />
-          </S.Options>
-        </S.OptionsRequest>
-      </S.ListItem>
-      <S.ListItem>
-        <S.Image src={iconImage} alt="download" />
-        <S.ID>#16835</S.ID>
-        <S.NameDate>
-          <S.Name>Maria Luciana</S.Name>
-          <S.Date>10/10/2020 18:30</S.Date>
-        </S.NameDate>
-        <S.Value>R$ 5310,88</S.Value>
-
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
-        <S.OptionsRequest>
-          <S.LinkItem to="/home">Ver pedido</S.LinkItem>
-          <S.Options>
-            <CloudDownloadOutlinedIcon
-              style={{ marginRight: '.8rem', cursor: 'pointer' }}
-            />
-            <DeleteOutlineOutlinedIcon
-              style={{ marginRight: '.8rem', cursor: 'pointer' }}
-            />
-          </S.Options>
-        </S.OptionsRequest>
-      </S.ListItem>
-      <S.ListItem>
-        <S.Image src={iconImage} alt="download" />
-        <S.ID>#16835</S.ID>
-        <S.NameDate>
-          <S.Name>Maria Luciana</S.Name>
-          <S.Date>10/10/2020 18:30</S.Date>
-        </S.NameDate>
-        <S.Value>R$ 5310,88</S.Value>
-
-        <S.FilterTag>Aguardando agendamento</S.FilterTag>
+        <S.FilterTag>
+          <Text component="div" modifiers={['finished']}>
+            Finalizado
+          </Text>
+        </S.FilterTag>
         <S.OptionsRequest>
           <S.LinkItem to="/home">Ver pedido</S.LinkItem>
           <S.Options>

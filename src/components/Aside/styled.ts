@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 7rem;
   height: 100vh;
   background: #ffffff;
+  top: 0;
 
   ${media.lessThan('small')`
     width: 6rem;

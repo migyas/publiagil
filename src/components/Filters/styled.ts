@@ -1,12 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Card } from '@material-ui/core';
+
+interface PropsIcon {
+  colorBackground?: string;
+}
 
 export const Container = styled(Card)`
   max-width: 88rem;
-  width: 30rem;
+  width: 33rem;
   height: 30rem;
   background-color: #ffffff;
-  padding: 2.4rem 2.5rem 0 2.5rem;
+  padding: 2.5rem 0;
+  padding-left: 2rem;
+  padding-right: 2.7rem;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.16);
   border-radius: 4px;
 
@@ -25,15 +31,14 @@ export const Container = styled(Card)`
   }
 `;
 
-export const Title = styled.p`
+export const Title = styled.div`
   text-transform: uppercase;
-  font-weight: normal;
-  color: #bdbdbd;
   margin-bottom: 1.6rem;
 `;
 
 export const List = styled.ul`
   list-style: none;
+  width: 29rem;
 
   @media (max-width: 1100px) {
     display: flex;
@@ -46,17 +51,29 @@ export const ListItem = styled.li`
   margin-bottom: 1.6rem;
   display: flex;
 
+
   @media (max-width: 1100px) {
     margin-right: 2rem;
+    width: 18rem;
   }
 `;
 
-export const ListIcon = styled.li`
-  width: 1.6rem;
-  height: 1.6rem;
-  background-color: #c4c4c4;
+export const ListIcon = styled.div<PropsIcon>`
+
+  ${({ colorBackground }) => (colorBackground
+    ? css`
+          background-color: ${colorBackground};
+          width: 1.6rem;
+          height: 1.6rem;
+          border-radius: 50%;
+          margin-right: 1.6rem;
+
+        `
+    : css`
+          background-color: #c4c4c4
+        `)};
+
   border-radius: 50%;
-  margin-right: 1.6rem;
 
   @media (max-width: 350px) {
     width: 1.3rem;
@@ -68,7 +85,7 @@ export const ItemDescription = styled.p`
   font-size: 1.4rem;
   font-weight: 400;
 
-  @media (max-width: 281px) {
+  @media (max-width: 1100px) {
     font-size: 1.2rem;
   }
 `;
